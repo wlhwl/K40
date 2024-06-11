@@ -9,7 +9,7 @@ make -j8
 
 ### Choose what kind of noise to generate in config
 Now it has:
-- K40
+- K40 for hDOM
 - Dark Noise for PMT
 
 #### K40
