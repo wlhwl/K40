@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.21)
-project(fast_whole_det_sim)
+project(noise_processer)
 
 set(CMAKE_CXX_STANDARD 17)
 
@@ -19,12 +19,12 @@ else()
     include_directories(/home/ineffablord/documents/ROOT/root-6.28/include)
 endif()
 
-add_executable(gen_k40 ${PROJECT_BINARY_DIR}/gen_k40.cc ${sources} ${headers})
+add_executable(NoiseProcesser ${PROJECT_BINARY_DIR}/NoiseProcesser.cc ${sources} ${headers})
 
 if(ROOT_FOUND)
-    target_link_libraries(gen_k40 ${ROOT_LIBRARIES})
+    target_link_libraries(NoiseProcesser ${ROOT_LIBRARIES})
 else()
     # Specify the ROOT libraries directory
     link_directories(/home/ineffablord/documents/ROOT/root-6.28/lib)
 endif()
-target_link_libraries(gen_k40 ${YAML_CPP_LIBRARIES})
+target_link_libraries(NoiseProcesser ${YAML_CPP_LIBRARIES})
