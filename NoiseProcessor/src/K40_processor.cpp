@@ -52,6 +52,7 @@ double K40_processor::K40poststepdoit(double t0, double t) {
     double t5 = exp_CL5(gen);
 
     double t_min = std::min({t1, t2, t3, t4, t5});
+    if(t_min==0){return t0;}
     if(t_min+t0>t){return t;}
     
     if (t_min == t1){

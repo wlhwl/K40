@@ -12,7 +12,7 @@ inline double max_time;
 inline std::vector<float> *pmt_t= nullptr, *pmt_e= nullptr/*, *sipm_t= nullptr, *sipm_e= nullptr*/;
 inline std::vector<int> *pmt_id= nullptr, *pmt_DOMid= nullptr/*, *sipm_id= nullptr, *sipm_DOMid= nullptr*/;
 
-inline std::vector<float> new_t;
+inline std::vector<double> new_t;
 inline std::vector<int> new_pmt_id, new_DOMid; // 0~NUM_PMTs: PMT; NUM_PMTs~: SiPM
 inline std::vector<float> new_x, new_y, new_z;
 inline std::vector<int> new_hit_type; //0 for noise, 1 for signal, -1 for K40
