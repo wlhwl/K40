@@ -1,0 +1,38 @@
+##Noise options
+K40:
+  ##K40 noise is processed only on DOM level
+  ##options: on or off
+  process: on
+  ##K40 coincidence rate of different level for PMT per hDOM (Hz)
+  CL_rate:
+    CL1: 71905.7
+    CL2: 1053.1
+    CL3: 103.5
+    CL4: 16.0
+    CL5: 2.2
+
+DarkNoise:
+  ##options: both, PMT, SiPM or off
+  process: PMT
+  ##dark noise rate for pmt (Hz)
+  pmtrate: 1000
+  num_pmt: 31
+  ##dark noise rate for sipm (Hz), not available now because of large amount of noise
+  sipmrate: 1e6
+  num_sipm: 24
+
+##maximum time of photon (ns)
+max_time: 20000
+
+##specify the csv file for detector array
+fileGeometry: ../config/penrose.csv
+
+##if you want to add noise to every dom, options: humble(selected hDOMs), rage(all hDOMs)
+noise_mode: humble
+
+##What kind of event in the root file, options: track, cascade
+event_type: track
+#track events: range means the radius of the cylinder whose center is the track
+#cascade events: range means the radius of the sphere whose center is the primary vertex
+#unit m
+range: 200
