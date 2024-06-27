@@ -1,6 +1,6 @@
 # NoiseProcessor-beta
 ### Quick start
-In app folder, 
+In app folder, you need a root file which is an hDOM simulation output.
 ```
 cmake ..
 make -j8
