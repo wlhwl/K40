@@ -71,7 +71,7 @@ void Event_processor::set_up_rootfile(std::string rootfile) {
     primaryTree->SetBranchAddress("pz", &pri_nz);
     primaryTree->SetBranchAddress("PdgId", &pri_pdgid);
 
-    hitsTree = new TTree("Hits", "Hits");
+    hitsTree = new TTree("NoisyPmtHit", "PmtHit with noise");
     hitsTree->Branch("t0", &new_t);
     hitsTree->Branch("PmtId", &new_pmt_id);
     hitsTree->Branch("DomId", &new_DOMid);
